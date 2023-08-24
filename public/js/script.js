@@ -71,3 +71,20 @@ const downloadCode = () => {
 
     URL.revokeObjectURL(link.href);
 }
+
+
+// auto complete and intendation function
+codeInput.addEventListener('input', autoComplete);
+
+const autoComplete = () => {
+    const indentSize = 4;
+    const lines = codeInput.value.split("\n");
+
+    for (let i = 1; i < lines.length; i++) {
+        if (lines[i - 1].trim().endsWith("{")) {
+            lines[i] = " ".repeat(indentSize) + lines[i];
+        }
+    }
+
+    codeInput.value = lines.join("\n");
+}
