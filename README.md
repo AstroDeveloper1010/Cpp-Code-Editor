@@ -33,7 +33,7 @@ git clone https://github.com/AstroDeveloper1010/Cpp-Code-Editor.git
 
 1. Start the Node.js server.
 
-2. Open your web browser and navigate to `http://localhost:3000` to access the Online C++ Editor App.
+2. Open your web browser and navigate to `http://localhost:4000` to access the Online C++ Editor App.
 
 3. Write or paste your C++ code into the editor.
 
