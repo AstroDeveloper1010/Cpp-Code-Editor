@@ -10,6 +10,9 @@ The Online C++ Editor App is a web-based application that allows users to write,
 - **Responsive Design:** 📱 The app is designed to be responsive and work well on various screen sizes.
 - **Easy to Use:** 🌟 The intuitive user interface makes it simple for both beginners and experienced programmers to use.
 
+## Output 👨‍💻
+![Output](output.png)
+
 ## Requirements 📋
 
 - Node.js: Make sure you have Node.js installed on your machine.
