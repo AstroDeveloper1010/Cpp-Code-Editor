@@ -88,3 +88,20 @@ const autoComplete = () => {
 
     codeInput.value = lines.join("\n");
 }
+
+
+// tab btn space feature
+codeInput.addEventListener("keydown", tabBtnSpace);
+
+const tabBtnSpace = () => {
+    if (e.key === "Tab") {
+        e.preventDefault();
+
+        const start = codeInput.selectionStart;
+        const end = codeInput.selectionEnd;
+
+        codeInput.value = codeInput.value.substring(0, start) + "    " + codeInput.value.substring(end);
+
+        codeInput.selectionStart = codeInput.selectionEnd = start + 4;
+    }
+}
