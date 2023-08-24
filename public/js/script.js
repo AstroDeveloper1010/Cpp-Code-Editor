@@ -1,9 +1,11 @@
 // declare variables
+const editorContainer = document.querySelector(".editor-container");
 const runBtn = document.querySelector('.btn_run');
 const clearBtn = document.querySelector('.btn_clear');
 const codeInput = document.querySelector('.code-input');
 const outputArea = document.querySelector('.ouput');
 const lineNumberDiv = document.querySelector(".line-number");
+const toggleButton = document.querySelector(".btn_toggle");
 
 
 // on clicking run btn
@@ -44,3 +46,11 @@ const updateLineNumber = () => {
 }
 
 updateLineNumber();
+
+
+// function to change theme of the code editor
+toggleButton.addEventListener("click", toggleTheme);
+
+const toggleTheme = () => {
+    editorContainer.classList.toggle("dark-theme");
+}
