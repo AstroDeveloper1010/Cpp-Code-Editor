@@ -2,6 +2,7 @@
 const editorContainer = document.querySelector(".editor-container");
 const runBtn = document.querySelector('.btn_run');
 const clearBtn = document.querySelector('.btn_clear');
+const downloadBtn = document.querySelector('.btn_download');
 const codeInput = document.querySelector('.code-input');
 const outputArea = document.querySelector('.ouput');
 const lineNumberDiv = document.querySelector(".line-number");
@@ -53,4 +54,20 @@ toggleButton.addEventListener("click", toggleTheme);
 
 const toggleTheme = () => {
     editorContainer.classList.toggle("dark-theme");
+}
+
+
+// donwloading code written by the user
+downloadBtn.addEventListener("click", downloadCode);
+
+const downloadCode = () => {
+    const code = codeInput.value;
+    const blob = new Blob([code], { type: "text/plain" });
+
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "my_code.cpp";
+    link.click();
+
+    URL.revokeObjectURL(link.href);
 }
