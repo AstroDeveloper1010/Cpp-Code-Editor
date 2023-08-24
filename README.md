@@ -12,6 +12,7 @@ The Online C++ Editor App is a web-based application that allows users to write,
 
 ## Output 👨‍💻
 ![Output](output.png)
+![Output](output_mobile.png)
 
 ## Requirements 📋
 
