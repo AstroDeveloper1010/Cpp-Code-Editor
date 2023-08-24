@@ -1,32 +1,32 @@
-# Online C++ Editor App
+# Online C++ Editor App 🖥️
 
 The Online C++ Editor App is a web-based application that allows users to write, compile, and run C++ code directly from their web browsers. This application utilizes EJS, CSS, JavaScript, Node.js, and Express to provide a seamless coding experience.
 
-## Features
+## Features 🚀
 
-- **Code Editing:** Write and edit C++ code in a user-friendly code editor.
-- **Compilation:** Compile C++ code on the server to check for syntax and compilation errors.
-- **Output Display:** View the output of the compiled C++ code directly on the web interface.
-- **Responsive Design:** The app is designed to be responsive and work well on various screen sizes.
-- **Easy to Use:** The intuitive user interface makes it simple for both beginners and experienced programmers to use.
+- **Code Editing:** ✏️ Write and edit C++ code in a user-friendly code editor.
+- **Compilation:** 🛠️ Compile C++ code on the server to check for syntax and compilation errors.
+- **Output Display:** 👀 View the output of the compiled C++ code directly on the web interface.
+- **Responsive Design:** 📱 The app is designed to be responsive and work well on various screen sizes.
+- **Easy to Use:** 🌟 The intuitive user interface makes it simple for both beginners and experienced programmers to use.
 
-## Requirements
+## Requirements 📋
 
 - Node.js: Make sure you have Node.js installed on your machine.
 - Internet Browser: The app is compatible with major modern browsers like Chrome, Firefox, and Safari.
 
-## Installation
+## Installation 🔧
 
 1. Clone this repository to your local machine.
 
-https://github.com/AstroDeveloper1010/Cpp-Code-Editor.git
+git clone https://github.com/AstroDeveloper1010/Cpp-Code-Editor.git
 
 2. Navigate to the project directory.
 
 3. Install the required dependencies using npm (Node Package Manager).
 
 
-## Usage
+## Usage 🛠️
 
 1. Start the Node.js server.
 
@@ -38,7 +38,7 @@ https://github.com/AstroDeveloper1010/Cpp-Code-Editor.git
 
 5. The server will compile the code and display the output below the editor.
 
-## Technologies Used
+## Technologies Used 💻
 
 - **EJS:** Templating engine for generating dynamic HTML pages.
 - **CSS:** Styling and layout of the web application.
@@ -47,11 +47,11 @@ https://github.com/AstroDeveloper1010/Cpp-Code-Editor.git
 - **Express:** Web framework for building the server and handling requests.
 
 
-## License
+## License 📄
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgments
+## Acknowledgments 🙌
 
 - This project was inspired by the need for a simple online C++ editor.
 - Thanks to the open-source community for providing the tools and libraries necessary to build this app.
