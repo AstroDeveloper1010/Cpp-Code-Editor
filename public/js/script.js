@@ -93,7 +93,7 @@ const tabFunc = () => {
 
 // Fetch keywords from keywords.json
 async function fetchKeywords() {
-    const response = await fetch('/keywords.json');
+    const response = await fetch('keywords.json');
     const data = await response.json();
     return data.keywords;
 }
