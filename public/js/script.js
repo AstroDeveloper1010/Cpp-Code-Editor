@@ -68,3 +68,24 @@ const runCode = () => {
 
 // event listener
 runBtn.addEventListener('click', runCode);
+
+
+// adding event listener to tab btn
+codeInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab') {
+        e.preventDefault();
+        tabFunc();
+    }
+});
+
+// Function to make the tab btn work
+const tabFunc = () => {
+    const cursorPosition = codeInput.selectionStart;
+    const currentValue = codeInput.value;
+    const newValue = currentValue.substring(0, cursorPosition) + '\t' + currentValue.substring(cursorPosition);
+    codeInput.value = newValue;
+
+    // Update cursor position after pressing tab btn
+    codeInput.selectionStart = cursorPosition + 1;
+    codeInput.selectionEnd = cursorPosition + 1;
+}
