@@ -35,7 +35,7 @@ const downloadCode = () => {
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'code.cpp'; // Change the filename as needed
+    a.download = 'code.cpp';
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
@@ -58,7 +58,7 @@ themeBtn.addEventListener('click', toggleTheme);
 
 
 // Function to simulate code execution
-function runCode() {
+const runCode = () => {
     const codeContent = codeInput.value;
 
     // Simulate running the code
@@ -66,5 +66,5 @@ function runCode() {
     outputText.textContent = simulatedOutput;
 }
 
-// Attach event listener to the button
+// event listener
 runBtn.addEventListener('click', runCode);
