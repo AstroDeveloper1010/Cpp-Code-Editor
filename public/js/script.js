@@ -89,3 +89,31 @@ const tabFunc = () => {
     codeInput.selectionStart = cursorPosition + 1;
     codeInput.selectionEnd = cursorPosition + 1;
 }
+
+
+// Fetch keywords from keywords.json
+async function fetchKeywords() {
+    const response = await fetch('/keywords.json');
+    const data = await response.json();
+    return data.keywords;
+}
+
+// function to highlight keywords
+async function highlightKeywords() {
+    const keywords = await fetchKeywords();
+    const codeContent = codeInput.value;
+
+    // regex pattern for all keywords
+    const keywordsPattern = new RegExp(`\\b(${keywords.join('|')})\\b`, 'g');
+
+    // applying css class to mathched keywords
+    const highlightedCode = codeContent.replace(keywordsPattern, '<span class="keyword">$&</span>');
+
+    // setting the highlighted code in the textarea
+    codeInput.innerHTML = highlightedCode;
+}
+
+// event listener
+codeInput.addEventListener('input', highlightKeywords);
+
+highlightKeywords();
