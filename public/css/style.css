@@ -6,89 +6,60 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
 }
 
 .editor-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
+  margin: 20px;
+  background-color: #252526;
+  border: 1px solid #333;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
 .line-number {
-  width: 40px;
-  background-color: #f5f5f5;
-  border-right: 1px solid #ccc;
-  padding: 10px;
+  color: #858585;
+  float: left;
   text-align: right;
+  padding-right: 10px;
+  user-select: none;
+  white-space: pre-wrap;
+}
+
+.code-container {
+  position: relative;
 }
 
 .code-input {
+  background-color: transparent;
+  border: none;
+  color: #d4d4d4;
   width: 100%;
-  min-height: 40vh;
-  max-height: fit-content;
+  min-height: 300px;
   padding: 10px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  resize: none;
-  flex: 1;
+}
+
+.code-input-line-numbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px; /* Adjust as needed */
+  text-align: right;
+  color: #858585;
+  user-select: none;
+  padding-right: 5px;
+}
+
+.code-input-container {
+  margin-left: 10px;
 }
 
 .output {
-  background-color: #f5f5f5;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  overflow: auto;
-  font-size: 14px;
-  white-space: pre-wrap;
-  margin-top: 10px;
-}
-
-.btn-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.btn {
-  padding: 8px 16px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  margin: 5px;
-}
-
-.dark-theme {
   background-color: #333;
-  color: #fff;
-}
-
-.dark-theme .line-numbers {
-  color: #555;
-}
-
-.dark-theme .code-input {
-  background-color: #222;
-  color: #fff;
+  color: #f5f5f5;
   border: 1px solid #444;
-}
-
-.dark-theme .btn {
-    background-color: #444;
-    color: #fff;
-}
-
-.btn_toggle {
-  background-color: #000;
-  color: #fff !important;
+  padding: 10px;
+  min-height: 100px;
+  margin-top: 10px;
 }

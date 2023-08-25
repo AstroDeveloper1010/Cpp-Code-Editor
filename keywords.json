@@ -11,5 +11,12 @@
     "function",
     "class",
     "sort()",
-    "Array"
+    "Array",
+    "namespace",
+    "vector<int>",
+    "list<int>",
+    "map<int, int>",
+    "stack<int>",
+    "queue<int>",
+    "return"
 ]

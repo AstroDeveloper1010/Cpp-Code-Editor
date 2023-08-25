@@ -1,23 +1,35 @@
 <%- include('./views/partials/header') %>
 
-    <div class="editor-container">
-        <!-- dark theme div -->
-        <div class="theme-toggle">
-            <button class="btn btn_toggle">Change Theme</button>
-        </div>
-        <!-- code input -->
-        <div class="line-number"></div>
-        <textarea class="code-input" placeholder="Write C++ code here..."></textarea>
-        <!-- output div -->
-        <div class="output">
-            Output will appear here
-        </div>
-        <!-- btn container -->
-        <div class="btn-container">
-            <button class="btn btn_run">Run</button>
-            <button class="btn btn_clear">Clear</button>
-            <button class="btn btn_download">Download Code</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="editor-container">
+                    <!-- Theme toggle button -->
+                    <div class="theme-toggle mb-4">
+                        <button class="btn btn-primary btn_toggle">Change Theme</button>
+                    </div>
+                    <!-- Code input with line numbers -->
+                    <div class="code-container">
+                        <div class="code-input-line-numbers"></div>
+                        <div class="code-input-container">
+                            <textarea class="code-input" placeholder="Write C++ code here..."></textarea>
+                        </div>
+                    </div>
+                    <!-- Button container -->
+                    <div class="btn-container mt-2">
+                        <button class="btn btn-success btn_run">Run</button>
+                        <button class="btn btn-warning btn_clear">Clear</button>
+                        <button class="btn btn-secondary btn_download">Download Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Output div -->
+                <div class="output">
+                    Output will appear here
+                </div>
+            </div>
         </div>
     </div>
 
-<%- include('./views/partials/footer') %>
+    <%- include('./views/partials/footer') %>
