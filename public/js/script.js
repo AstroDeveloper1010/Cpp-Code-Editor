@@ -3,7 +3,14 @@ const editorContainer = document.querySelector('.editor-container');
 const codeInput = document.querySelector('.code-input');
 const lineNumber = document.querySelector('.line-number');
 const downloadBtn = document.querySelector('.btn_download');
+const clearBtn = document.querySelector('.btn_clear');
 const themeBtn = document.querySelector('.btn_toggle');
+
+
+// Clear the code on clicking clear btn
+clearBtn.addEventListener('click', () => {
+    codeInput.value = '';
+})
 
 
 // Function to update line numbers
@@ -13,13 +20,13 @@ const updateLineNumbers = () => {
     lineNumber.innerHTML = lineNumbersHTML;
 }
 
-// event listeners
+// event listener
 codeInput.addEventListener('input', updateLineNumbers);
 window.addEventListener('load', updateLineNumbers);
 
 
 // Function to handle download
-function downloadCode() {
+const downloadCode = () => {
     const codeContent = codeInput.value;
     const blob = new Blob([codeContent], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -34,15 +41,15 @@ function downloadCode() {
     URL.revokeObjectURL(url);
 }
 
-// Attach event listener to the button
+// event listener
 downloadBtn.addEventListener('click', downloadCode);
 
 
 // Function to toggle themes
-function toggleTheme() {
+const toggleTheme = () => {
     editorContainer.classList.toggle('dark-theme');
     editorContainer.classList.toggle('light-theme');
 }
 
-// Attach event listener to the button
+// event listener
 themeBtn.addEventListener('click', toggleTheme);
