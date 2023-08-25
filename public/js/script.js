@@ -1,7 +1,9 @@
 // declare variables
+const editorContainer = document.querySelector('.editor-container');
 const codeInput = document.querySelector('.code-input');
 const lineNumber = document.querySelector('.line-number');
 const downloadBtn = document.querySelector('.btn_download');
+const themeBtn = document.querySelector('.btn_toggle');
 
 
 // Function to update line numbers
@@ -34,3 +36,13 @@ function downloadCode() {
 
 // Attach event listener to the button
 downloadBtn.addEventListener('click', downloadCode);
+
+
+// Function to toggle themes
+function toggleTheme() {
+    editorContainer.classList.toggle('dark-theme');
+    editorContainer.classList.toggle('light-theme');
+}
+
+// Attach event listener to the button
+themeBtn.addEventListener('click', toggleTheme);

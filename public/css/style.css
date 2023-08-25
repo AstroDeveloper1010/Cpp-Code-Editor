@@ -63,3 +63,17 @@ body {
   min-height: 100px;
   margin-top: 10px;
 }
+
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.light-theme {
+  background-color: #f4f4f4;
+  color: #000 !important;
+
+  .code-input {
+    color: #000;
+  }
+}
